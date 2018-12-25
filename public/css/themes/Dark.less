@@ -12,6 +12,7 @@
 @tr-active-color: #1C1C1C;
 @tr-hover-color: #008C6E;
 
+@color-notification-error: #a92626;
 @color-notification-success: #005247;
 
 input, select, textarea {
@@ -217,6 +218,56 @@ input[type="submit"] {
       color: @tr-active-color;
     }
   }
+  
+  @color-diff-ins: #00d888;
+  @color-diff-ins-text: #016741;
+  @color-diff-del: #a92626;
+  @color-diff-del-text: #fdb1b1;
+  @color-diff-changed-old: #d26f6f;
+  @color-diff-changed-old-text: #fdb1b1;
+  @color-diff-changed-new: #5ef9c0;
+  @color-diff-changed-new-text: #53ab8a;
+  
+  .DifferencesSideBySide {
+    .ChangeInsert {
+      td.Left {
+        background: @gray-lighter;
+      }
+      td.Right {
+        background: @color-diff-ins;
+        color: @color-diff-ins-text;
+      }
+    }
+
+    .ChangeDelete {
+      td.Left {
+        background: @color-diff-del;
+        color: @color-diff-del-text;
+      }
+      td.Right {
+        background: @gray-lighter;
+      }
+    }
+
+    .ChangeReplace {
+      td.Left {
+        background: @color-diff-changed-old;
+        color: @color-diff-changed-old-text;
+        del {
+          background: @color-diff-del;
+        }
+      }
+      td.Right {
+        background: @color-diff-changed-new;
+        color: @color-diff-changed-new-text;
+        ins {
+          background: @color-diff-ins;
+          color: @color-diff-ins-text;
+        }
+      }
+    }
+  }
+
 }
 
 
