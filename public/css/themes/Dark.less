@@ -267,7 +267,24 @@ input[type="submit"] {
       }
     }
   }
-
+  .DifferencesInline .ChangeReplace .Left,
+  .DifferencesInline .ChangeDelete .Left {
+      background: @color-diff-changed-old;
+      color: @color-diff-changed-old-text;
+  }
+  .DifferencesInline .ChangeReplace .Right,
+  .DifferencesInline .ChangeInsert .Right {
+      background: @color-diff-changed-new;
+      color: @color-diff-changed-new-text;
+  }
+  .DifferencesInline .ChangeReplace ins {
+      background: @color-diff-ins;
+      color: @color-diff-ins-text;
+  }
+  .DifferencesInline .ChangeReplace del {
+      background: @color-diff-del;
+      color: @color-diff-del-text;
+  }
 }
 
 
