@@ -76,6 +76,9 @@ tr[href]:hover {
   .nav-level-2 > .nav-item {
     color: @black;
   }
+  ul:not(.nav-level-2) > .selected > a:after {
+    background-color: @body-bg-color;
+  }
 }
 
 #main div.filter form.editor ul.tree li.active {
